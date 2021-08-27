@@ -1,0 +1,41 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - uses: pre-commit/action@v2.0.0
+
+  test:
+    needs: pre-commit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Run test
+        run: ./deployment/run-unit-test.sh
+        shell: bash

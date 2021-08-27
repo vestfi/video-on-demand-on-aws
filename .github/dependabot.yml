@@ -1,0 +1,110 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/source/archive-source"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/custom-resource"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/dynamo"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/encode"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/error-handler"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/input-validate"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/media-package-assets"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/output-validate"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/profiler"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/sns-notification"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/sqs-publish"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
+  - package-ecosystem: npm
+    directory: "/source/step-function"
+    schedule:
+      interval: weekly
+      timezone: America/Mexico_City
+    open-pull-requests-limit: 2
+    target-branch: staging
+    allow:
+      - dependency-type: direct
