@@ -32,3 +32,6 @@
 # System Files
 **/.DS_Store
 **/.vscode
+**/package-lock.json
+**/mediainfo
+**/README.md-e
