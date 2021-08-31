@@ -116,7 +116,8 @@ const getFrameGroup = (event, outputPath) => ({
     }]
 });
 //PR: https://github.com/awslabs/video-on-demand-on-aws/pull/107
-const mergeSettingsWithDefault = (originalGroup, customGroup) => {
+const mergeSettingsWithDefault = (is_custom_template, originalGroup, customGroup) => {
+    console.log(originalGroup, customGroup, 'groups loging');
     return _.merge({}, originalGroup, customGroup);
 };
 
