@@ -34,7 +34,7 @@ jobs:
       - name: wget
         uses: wei/wget@v1
         with:
-        args: -O mediainfocompressed https://mediaarea.net/download/binary/mediainfo/21.03/MediaInfo_CLI_21.03_Lambda.zip
+          args: -O mediainfocompressed https://mediaarea.net/download/binary/mediainfo/21.03/MediaInfo_CLI_21.03_Lambda.zip
       - name: Uncompress and Move media info
         run: |
           unzip mediainfocompressed \
