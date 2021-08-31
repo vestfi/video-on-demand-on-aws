@@ -31,6 +31,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # if you have/need it
           aws-region: us-east-2
+      - name: wget
+        uses: wei/wget@v1
+        with:
+        args: -O mediainfocompressed https://mediaarea.net/download/binary/mediainfo/21.03/MediaInfo_CLI_21.03_Lambda.zip
+      - name: Uncompress and Move media info
+        run: |
+          unzip mediainfocompressed \
+          && mv mediainfocompressed/mediainfo ./source/mediainfo/bin/ \
       - name: Deploy
         run: ./deployment/built-s3-dist.sh
         shell: bash

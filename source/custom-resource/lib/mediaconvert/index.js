@@ -248,7 +248,7 @@ const Delete = async (config) => {
         await _deleteTemplates(mediaconvert, qvbrTemplatesNoPreset, config.StackName);
 
         // if this Delete is happening after an update to an older version
-        // then we also need to delete templates and presets from the older deployment 
+        // then we also need to delete templates and presets from the older deployment
         await _deleteTemplates(mediaconvert, qvbrTemplates, config.StackName);
         await _deleteTemplates(mediaconvert, mediaPackageTemplates, config.StackName)
         await _deletePresets(mediaconvert, qvbrPresets, config.StackName);
