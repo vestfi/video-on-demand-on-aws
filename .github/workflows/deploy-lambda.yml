@@ -1,11 +1,9 @@
 name: Deploy Lambda
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: Deploy Vod infraestructure
-        required: true
+  push:
+    branches:
+      - main
 
 jobs:
   deploy-lambda-prod:
@@ -40,5 +38,5 @@ jobs:
           unzip mediainfocompressed \
           && mv bin/mediainfo ./source/mediainfo/bin/ \
       - name: Deploy
-        run: ./deployment/build-s3-dist.sh
+        run: ./deployment/build-s3-dist.sh vod-vest-staging v1.0.0
         shell: bash
