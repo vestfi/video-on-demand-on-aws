@@ -40,5 +40,5 @@ jobs:
           unzip mediainfocompressed \
           && mv bin/mediainfo ./source/mediainfo/bin/ \
       - name: Deploy
-        run: ./deployment/built-s3-dist.sh
+        run: ./deployment/build-s3-dist.sh
         shell: bash
