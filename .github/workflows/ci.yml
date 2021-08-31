@@ -35,6 +35,6 @@ jobs:
           node-version: "14"
       - name: Run test
         run: |
-          cd deployment
+          cd deployment && \
           ./run-unit-tests.sh
         shell: bash
