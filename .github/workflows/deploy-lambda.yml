@@ -38,7 +38,7 @@ jobs:
       - name: Uncompress and Move media info
         run: |
           unzip mediainfocompressed \
-          && mv mediainfocompressed/mediainfo ./source/mediainfo/bin/ \
+          && mv bin/mediainfo ./source/mediainfo/bin/ \
       - name: Deploy
         run: ./deployment/built-s3-dist.sh
         shell: bash
