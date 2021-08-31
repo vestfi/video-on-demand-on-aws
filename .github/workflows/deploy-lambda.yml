@@ -38,5 +38,5 @@ jobs:
           unzip mediainfocompressed \
           && mv bin/mediainfo ./source/mediainfo/bin/ \
       - name: Deploy
-        run: ./deployment/build-s3-dist.sh vod-vest-staging v1.0.0
+        run: ./deployment/build-s3-dist.sh vod-vest-staging vod-vest-staging v1.0.0
         shell: bash
