@@ -41,7 +41,7 @@ jobs:
         run: |
           cd deployment && \
           ./build-s3-dist.sh vod-vest-staging vod-vest-staging v1.0.0
-        shell: bash'
+        shell: bash
      - name: Copy files to Lambda
         run: |
           cd deployment && \
