@@ -37,6 +37,10 @@ jobs:
         run: |
           unzip mediainfocompressed \
           && mv bin/mediainfo ./source/mediainfo/bin/ \
+      - name: Copy files to Lambda
+        run: |
+          cd deployment && \
+          aws s3 cp ./regional-s3-assets/ s3://vod-vest-staging-us-east-2/vod-vest-staging/v1.0.0/ --recursive --acl bucket-owner-full-control
       - name: build CF deploy
         run: |
           cd deployment && \
