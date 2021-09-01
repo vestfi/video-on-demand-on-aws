@@ -37,7 +37,7 @@ jobs:
         run: |
           unzip mediainfocompressed \
           && mv bin/mediainfo ./source/mediainfo/bin/ \
-       - name: build CF deploy
+      - name: build CF deploy
         run: |
           cd deployment && \
           ./build-s3-dist.sh vod-vest-staging vod-vest-staging v1.0.0
@@ -46,7 +46,6 @@ jobs:
         run: |
           cd deployment && \
           aws s3 cp ./regional-s3-assets/ s3://vod-vest-staging-us-east-2/vod-vest-staging/v1.0.0/ --recursive --acl bucket-owner-full-control
-
       - name: Deploy
         run: aws cloudformation deploy --template-file ./deployment/regional-s3-assets/video-on-demand-on-aws.template --stack-name vod-vest-deploy-staging --s3-bucket vod-vest-staging-us-east-2 --parameter-overrides AdminEmail=frans@mivest.io --capabilities CAPABILITY_IAM
         shell: bash
